@@ -1,0 +1,20 @@
+<div class="row" [hidden]="startbtn">
+  <div class="col s4">
+      <a class="waves-effect waves-light btn-large" (click)="starttest()">Start</a>
+  </div>
+
+  <!-- <div class="col s4">
+      <a class="waves-effect waves-light btn-large" (click)="jeeseled()">JEE</a>
+  </div>
+  <div class="col s4">
+      <a class="waves-effect waves-light btn-large" (click)="cbseseled()">CBSE</a>
+  </div> -->
+</div>
+
+<div [hidden]="preloader1">
+  <h2 [hidden]="timer">Exam Starts In {{counter}} Seconds</h2>
+
+  <div class="progress" >
+    <div class="indeterminate"></div>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+
+<!-- <a class="waves-effect waves-light btn-large" (click)="nextque()">CBSE</a> -->
+<div class="row">
+  <div class="col s4">
+    <div class="row">
+      <li *ngFor="let item of physURL; let i = index; trackBy: trackByFn"><a class="waves-effect waves-light btn" (click)="selectedque(i , phy)">{{i+1}}</a></li>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col s1">
+    {{quenum}}
+  </div>
+  <div class="col s11">
+    <img [src]="img" class="responsive-img" alt="">
+
+  </div>
+  <!-- <div class="row">
+    <div class="col 12">
+      <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="form-group">
+        <label>Gender</label>
+        <label><input type="radio" formControlName="gender" value="M" /> Male</label>
+        <label><input type="radio" formControlName="gender" value="F" />Female</label>
+        <button type="submit" [disabled]="!userForm.valid" class="btn btn-success">Submit</button>
+      </form>
+    </div>
+  </div> -->
+</div>
+<form action="#" #f="ngForm">
+  <div class="row">
+    <div class="col s3">
+      <p>
+        <input class="with-gap" name="group1" type="radio" value="a"  [(ngModel)]="stselectedOpt" #opta (ngModelChange)="selectedOpt(opta.value)" id="aopt" [checked]="checkedoptA" />
+        <label for="aopt">.(a)</label>
+      </p>
+    </div>
+    <div class="col s3">
+      <p>
+        <input class="with-gap" name="group1" type="radio" value="b"  [(ngModel)]="stselectedOpt" #optb (ngModelChange)="selectedOpt(optb.value)" id="bopt" [checked]="checkedoptb" />
+        <label for="bopt">.(b)</label>
+      </p>
+    </div>
+    <div class="col s3">
+      <p>
+        <input class="with-gap" name="group1" type="radio" value="c"  [(ngModel)]="stselectedOpt" #optc (ngModelChange)="selectedOpt(optc.value)" id="copt"  />
+        <label for="copt">.(c)</label>
+      </p>
+    </div>
+    <div class="col s3">
+      <p>
+        <input  class="with-gap" name="group1" type="radio" value="d"  [(ngModel)]="stselectedOpt" #optd (ngModelChange)="selectedOpt(optd.value)" id="dopt"  />
+        <label for="dopt">.(d)</label>
+      </p>
+    </div>
+
+
+
+
+
+</div>
+<p>Form value: {{ f.value | json }}</p>  <!-- {food: 'lamb' } -->
+    <p>myFood value: {{ myFood }}</p>  <!-- 'lamb' -->
+</form>
+
+<div class="row">
+  <div class="col s8"></div>
+  <div class="col s4">
+    <a class="waves-effect waves-light btn" (click)="correctingque()">Submit</a>
+  </div>
+</div>

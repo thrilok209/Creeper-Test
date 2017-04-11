@@ -1,0 +1,26 @@
+<div class="logincol">
+
+<div class="row">
+  <div class="input-field col s6">
+    <!-- <p>Email</p> -->
+    <input id="email" #email type="email" class="validate">
+    <label id="emaillab" for="email">Email</label>
+  </div>
+</div>
+
+<div class="row">
+  <div class="input-field col s6">
+    <!-- <p>Password</p> -->
+    <input id="password" #pass type="password" class="validate">
+    <label id="passwordlab" for="password">Password</label>
+  </div>
+</div>
+
+
+
+<div class="loginbtn">
+
+  <a class="waves-effect waves-light btn-large" (click)="loginA(email.value , pass.value)">Login In</a>
+</div>
+
+</div>
